@@ -1,0 +1,25 @@
+{
+  "name": "temperature-prometheus",
+  "version": "0.0.1",
+  "description": "Export temperature from https://github.com/iterate/temperature as prometheus metrics",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iterate/temperature-prometheus.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/iterate/temperature-prometheus/issues"
+  },
+  "homepage": "https://github.com/iterate/temperature-prometheus#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "node-fetch": "^1.7.3",
+    "prom-client": "^10.2.2"
+  }
+}
