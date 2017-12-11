@@ -20,7 +20,7 @@ const time_gauge = new Gauge({
 });
 
 function go_get_the_temp() {
-    let data = fetch('https://temp-5c997.firebaseio.com/temps.json')
+    let data = fetch('https://temp-5c997.firebaseio.com/temps.json?orderBy="$key"&limitToLast=1')
         .then(res => res.json())
         .then(data => {
             let points = Object.values(data);
@@ -32,7 +32,7 @@ function go_get_the_temp() {
             temp_gauge.set({ floor: '6' }, temp);
             time_gauge.set({ floor: '6' }, time);
 
-            setTimeout(go_get_the_temp, 10000);
+            setTimeout(go_get_the_temp, 60000);
         });
 }
 
